@@ -20,7 +20,7 @@ export const API = {
 
 // Default user profile
 export const DEFAULT_PROFILE = {
-  name: 'Alex Mercer',
+  name: '',
   age: 28,
   gender: 'Non-binary',
   weight: 70,

@@ -8,16 +8,18 @@ import {
   Sun, 
   Moon
 } from 'lucide-react';
-import { useTheme } from '../../app/providers.jsx';
+import { useTheme, useProfile } from '../../app/providers.jsx';
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
 
+  const { profile } = useProfile();
+  
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Dashboard', path: '/dashboard' },
+    { name: profile.name ? 'Dashboard' : 'Login', path: profile.name ? '/dashboard' : '/login' },
     { name: 'AI Chat', path: '/chat' },
     { name: 'Symptom Checker', path: '/symptoms' }
   ];
