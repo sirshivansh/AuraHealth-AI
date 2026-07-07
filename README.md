@@ -30,10 +30,10 @@ Select symptoms and parameters to receive secure, backend AI diagnostic guidance
 - **Intent-Based Dashboard**: Track hydration, sleep, and BMI with an intuitive interface. Receive a Daily Health Score.
 - **AI Wellness Chat**: Get real-time, personalized wellness advice using Groq's high-performance LLM APIs (Llama 3.1).
 - **Symptom Checker**: Enter symptoms to receive a structured analysis, possible causes, precautions, and dietary recommendations.
-- **Cloud Authentication & Database**: Secure Email/Password login and real-time user profile syncing powered by Firebase Auth & Firestore.
+- **Cloud Authentication & Database**: Secure **Email/Password** and **Google Sign-In** powered by Firebase Auth & Firestore.
 - **Premium UI**: Designed with an accessible, high-contrast dark glassmorphic aesthetic using Tailwind CSS and Framer Motion.
 
-## 🚀 Quick Start
+## 🚀 Quick Start (Local Development)
 
 ### 1. Clone the repository
 ```bash
@@ -62,11 +62,27 @@ VITE_FIREBASE_APP_ID=your_app_id
 VITE_FIREBASE_MEASUREMENT_ID=your_measurement_id
 ```
 
-### 4. Run the development server
+### 4. Configure Firebase Auth
+Ensure that in your Firebase Console, under **Authentication > Sign-in method**, you have enabled both **Email/Password** and **Google** providers.
+
+### 5. Run the development server
 ```bash
 npm run dev
 ```
 This will start both the Express backend (port 5000) and the Vite frontend (port 3000) concurrently.
+
+## 🌍 Deployment (Render)
+
+Deploying AuraHealth AI as a single full-stack web service on Render:
+
+1. Create a new **Web Service** on Render and connect your GitHub repository.
+2. Configure the build and start commands:
+   - **Build Command**: `npm install && npm run build` *(crucial for Vite to inject environment variables)*
+   - **Start Command**: `npm start` *(or `node server/index.js`)*
+3. Add your Environment Variables in the Render dashboard:
+   - Copy all keys from your `.env` file into Render's **Environment** tab.
+   - **Crucial**: Ensure the Firebase keys keep the `VITE_` prefix (e.g., `VITE_FIREBASE_API_KEY`), otherwise they will be `undefined` in the production build and cause an `auth/configuration-not-found` error.
+4. Click **Deploy**. If you update environment variables later, you must select **Manual Deploy > Clear build cache & deploy** to rebuild the frontend with the new keys.
 
 ## 🏗 Architecture
 ```
