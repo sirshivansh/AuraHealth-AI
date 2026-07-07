@@ -18,13 +18,13 @@ export const API = {
   HEALTH: '/api/health',
 };
 
-// Default user profile
+// Default user profile template (for new signups)
 export const DEFAULT_PROFILE = {
   name: '',
-  age: 28,
-  gender: 'Non-binary',
-  weight: 70,
-  height: 175,
+  age: '',
+  gender: '',
+  weight: '',
+  height: '',
   waterTarget: 2500,
   sleepTarget: 8,
 };
