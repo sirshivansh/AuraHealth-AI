@@ -24,7 +24,6 @@ Interact with MediMind Assistant to get personalized wellness guidance.
 Select symptoms and parameters to receive secure, backend AI diagnostic guidance and wellness guidelines.
 ![Symptom Checker](docs/screenshots/symptoms.png)
 
-> **Note**: To see the images above, please save the screenshots you provided into the `docs/screenshots/` directory matching the filenames used in this README (`home.png`, `dashboard-1.png`, `dashboard-2.png`, `chat.png`, `symptoms.png`).
 
 ## ✨ Features
 
