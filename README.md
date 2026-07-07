@@ -1,33 +1,65 @@
-# AuraHealth AI
+<div align="center">
+  <h1>AuraHealth AI</h1>
+  <p>An intelligent, empathetic wellness companion platform designed to help users track their health metrics, analyze symptoms, and interact with an AI health assistant.</p>
+</div>
 
-An intelligent, empathetic wellness companion platform designed to help users track their health metrics, analyze symptoms, and interact with an AI health assistant.
+---
 
-## Features
-- **Intent-Based Dashboard**: Track hydration, sleep, and BMI with an intuitive interface.
-- **AI Wellness Chat**: Get real-time, personalized wellness advice using Groq's high-performance LLM APIs.
-- **Symptom Checker**: Enter symptoms to receive a structured analysis, possible causes, and precautions.
+## 📸 Platform Previews
+
+### Landing Page
+Get started with our AI-powered health monitoring platform.
+![Home Page](docs/screenshots/home.png)
+
+### Wellness Dashboard
+Track metrics, compute health score indices, and view customized daily AI recommendations.
+![Dashboard Overview 1](docs/screenshots/dashboard-1.png)
+![Dashboard Overview 2](docs/screenshots/dashboard-2.png)
+
+### AI Wellness Chat
+Interact with MediMind Assistant to get personalized wellness guidance.
+![AI Chat](docs/screenshots/chat.png)
+
+### Interactive Symptom Checker
+Select symptoms and parameters to receive secure, backend AI diagnostic guidance and wellness guidelines.
+![Symptom Checker](docs/screenshots/symptoms.png)
+
+> **Note**: To see the images above, please save the screenshots you provided into the `docs/screenshots/` directory matching the filenames used in this README (`home.png`, `dashboard-1.png`, `dashboard-2.png`, `chat.png`, `symptoms.png`).
+
+## ✨ Features
+
+- **Intent-Based Dashboard**: Track hydration, sleep, and BMI with an intuitive interface. Receive a Daily Health Score.
+- **AI Wellness Chat**: Get real-time, personalized wellness advice using Groq's high-performance LLM APIs (Llama 3.1).
+- **Symptom Checker**: Enter symptoms to receive a structured analysis, possible causes, precautions, and dietary recommendations.
 - **Premium UI**: Designed with an accessible, high-contrast dark glassmorphic aesthetic using Tailwind CSS and Framer Motion.
 
-## Quick Start
+## 🚀 Quick Start
 
-1. **Clone the repository**
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
-3. **Environment Setup**:
-   Create a `.env` file in the project root and add your Groq API key:
-   ```env
-   GROQ_API_KEY=your_groq_api_key_here
-   PORT=5000
-   ```
-4. **Run the development server**:
-   ```bash
-   npm run dev
-   ```
-   This will start both the Express backend (port 5000) and the Vite frontend (port 3000).
+### 1. Clone the repository
+```bash
+git clone https://github.com/yourusername/HEALTH_CARE.git
+cd HEALTH_CARE
+```
 
-## Architecture
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Environment Setup
+Create a `.env` file in the project root and add your Groq API key:
+```env
+GROQ_API_KEY=your_groq_api_key_here
+PORT=5000
+```
+
+### 4. Run the development server
+```bash
+npm run dev
+```
+This will start both the Express backend (port 5000) and the Vite frontend (port 3000) concurrently.
+
+## 🏗 Architecture
 ```
 src/
 ├── app/          # App setup, context providers, routing
@@ -40,10 +72,10 @@ server/
 └── index.js      # Express backend handling Groq API integration
 ```
 
-## Tech Stack
+## 🛠 Tech Stack
 - **Frontend**: React 18, Vite, React Router, Tailwind CSS, Framer Motion
 - **Backend**: Node.js, Express
 - **AI Integration**: Groq SDK (`llama-3.1-8b-instant`)
 
-## License
+## 📜 License
 MIT License
