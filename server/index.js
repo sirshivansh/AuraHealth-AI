@@ -2,6 +2,11 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import Groq from 'groq-sdk';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Load environment variables
 dotenv.config();
@@ -178,6 +183,14 @@ app.get('/api/health', (req, res) => {
     status: "ok", 
     groqConfigured: !!apiKey && apiKey !== 'your_groq_api_key_here'
   });
+});
+
+// Serve frontend build output
+app.use(express.static(path.join(__dirname, '../dist')));
+
+// Fallback to index.html for React Router
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
 app.listen(PORT, () => {
