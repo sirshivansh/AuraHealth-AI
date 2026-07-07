@@ -5,6 +5,7 @@ import Footer from '../components/layout/Footer.jsx';
 import ScrollToTop from '../components/layout/ScrollToTop.jsx';
 import { AppProviders } from './providers.jsx';
 import { AppRoutes } from './routes.jsx';
+import SplashScreen from '../components/ui/SplashScreen.jsx';
 
 function AppLayout() {
   const location = useLocation();
@@ -34,8 +35,11 @@ function AppLayout() {
 }
 
 function App() {
+  const [showSplash, setShowSplash] = React.useState(true);
+
   return (
     <AppProviders>
+      {showSplash && <SplashScreen onComplete={() => setShowSplash(false)} />}
       <Router>
         <ScrollToTop />
         <AppLayout />

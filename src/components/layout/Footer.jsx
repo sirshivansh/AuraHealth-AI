@@ -130,8 +130,11 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="flex flex-col sm:flex-row items-center justify-between border-t border-slate-200/50 dark:border-slate-800/50 pt-8 text-xs text-slate-500 dark:text-slate-400">
-          <p>© {new Date().getFullYear()} AuraHealth AI. All rights reserved.</p>
-          <p className="flex items-center gap-1 mt-2 sm:mt-0">
+          <div className="flex flex-col items-center sm:items-start gap-1">
+            <p>© {new Date().getFullYear()} AuraHealth AI. All rights reserved.</p>
+            <p className="opacity-60 text-[10px]">Developed by Shivansh Mishra</p>
+          </div>
+          <p className="flex items-center gap-1 mt-4 sm:mt-0">
             Made with <Heart className="h-3 w-3 text-red-500 fill-red-500 animate-pulse" /> for optimal wellness.
           </p>
         </div>

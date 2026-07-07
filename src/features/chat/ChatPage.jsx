@@ -223,7 +223,7 @@ const Chat = () => {
               <Bot className="h-5 w-5 animate-pulse" />
             </div>
             <div>
-              <h2 className="font-bold text-sm">MediMind Assistant</h2>
+              <h2 className="font-bold text-sm">AuraHealth Assistant</h2>
               <span className="text-[10px] font-semibold text-success-500 flex items-center gap-1">
                 <span className="h-1.5 w-1.5 rounded-full bg-success-500 animate-ping"></span>
                 Llama 3.1 Active
@@ -337,6 +337,12 @@ const Chat = () => {
           </form>
         </div>
 
+      </div>
+      
+      <div className="text-center mt-4">
+        <p className="text-[10px] text-slate-400 dark:text-zinc-600 font-mono tracking-wider opacity-60">
+          Made by Shivansh Mishra
+        </p>
       </div>
 
     </div>

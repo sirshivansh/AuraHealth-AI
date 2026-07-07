@@ -929,6 +929,11 @@ Provide a highly actionable, encouraging tip referencing these stats. Do not pre
         )}
       </AnimatePresence>
 
+      <div className="text-center mt-12 pb-4">
+        <p className="text-[10px] text-slate-400 dark:text-zinc-600 font-mono tracking-wider opacity-60">
+          Made by Shivansh Mishra
+        </p>
+      </div>
     </div>
   );
 };

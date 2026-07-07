@@ -211,6 +211,11 @@ const LoginPage = () => {
             </div>
           </form>
         </GlassCard>
+        <div className="mt-6 text-center">
+          <p className="text-[10px] text-slate-400 dark:text-zinc-600 font-mono tracking-wider opacity-60">
+            Made by Shivansh Mishra
+          </p>
+        </div>
       </motion.div>
     </div>
   );
