@@ -12,7 +12,8 @@ import {
   Moon, 
   Heart,
   Play,
-  TrendingUp
+  TrendingUp,
+  Search
 } from 'lucide-react';
 import GlassCard from '../../components/ui/GlassCard.jsx';
 import ECGWave from '../../components/ui/ECGWave.jsx';
